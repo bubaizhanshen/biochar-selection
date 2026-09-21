@@ -26,7 +26,7 @@ make test
 ```bash
 python code/prepare_selection_data.py \
   --hmi-workbook /path/to/HMI_data.xlsx \
-  --ec-workbook /path/to/EC.xlsx \
+  --ec-workbook /path/to/Raw_data.xlsx \
   --out work/selection_inputs
 
 python code/run_strategy_selection.py \
@@ -35,6 +35,11 @@ python code/run_strategy_selection.py \
   --protocol work/selection_inputs/bundle/cell_mean_protocol.json \
   --out work/selection_cell_mean
 ```
+
+Use the author-released workbooks linked in the preparation guide, without
+re-saving them. Very small response-value changes altered some model choices
+in the numerical reproducibility check; matching record counts alone is not
+sufficient to verify the inputs.
 
 For original-response training, substitute `original_response.csv` and
 `original_response_protocol.json` and use a new output directory. Fixed-model

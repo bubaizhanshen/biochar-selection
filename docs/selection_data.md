@@ -31,7 +31,7 @@ From the repository root:
 ```bash
 python code/prepare_selection_data.py \
   --hmi-workbook /path/to/HMI_data.xlsx \
-  --ec-workbook /path/to/EC.xlsx \
+  --ec-workbook /path/to/Raw_data.xlsx \
   --out work/selection_inputs
 ```
 
