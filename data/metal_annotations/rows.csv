@@ -1,0 +1,253 @@
+source_table_row_id,source_study_id,material_group,pollutant,series,dose_g_L,contact_time_h,matrix,provenance_tier,train_eligible,test_eligible,expected_material_label,metal_order,lead_order
+189,Cui2016_Canna,Cui2016_Canna::CI300,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI300,0,
+190,Cui2016_Canna,Cui2016_Canna::CI300,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI300,1,
+191,Cui2016_Canna,Cui2016_Canna::CI300,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI300,2,
+192,Cui2016_Canna,Cui2016_Canna::CI300,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI300,3,
+193,Cui2016_Canna,Cui2016_Canna::CI300,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI300,4,
+194,Cui2016_Canna,Cui2016_Canna::CI300,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI300,5,
+195,Cui2016_Canna,Cui2016_Canna::CI400,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI400,6,
+196,Cui2016_Canna,Cui2016_Canna::CI400,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI400,7,
+197,Cui2016_Canna,Cui2016_Canna::CI400,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI400,8,
+198,Cui2016_Canna,Cui2016_Canna::CI400,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI400,9,
+199,Cui2016_Canna,Cui2016_Canna::CI400,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI400,10,
+200,Cui2016_Canna,Cui2016_Canna::CI400,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI400,11,
+201,Cui2016_Canna,Cui2016_Canna::CI500,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI500,12,
+202,Cui2016_Canna,Cui2016_Canna::CI500,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI500,13,
+203,Cui2016_Canna,Cui2016_Canna::CI500,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI500,14,
+204,Cui2016_Canna,Cui2016_Canna::CI500,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI500,15,
+205,Cui2016_Canna,Cui2016_Canna::CI500,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI500,16,
+206,Cui2016_Canna,Cui2016_Canna::CI500,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI500,17,
+207,Cui2016_Canna,Cui2016_Canna::CI600,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI600,18,
+208,Cui2016_Canna,Cui2016_Canna::CI600,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI600,19,
+209,Cui2016_Canna,Cui2016_Canna::CI600,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI600,20,
+210,Cui2016_Canna,Cui2016_Canna::CI600,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI600,21,
+211,Cui2016_Canna,Cui2016_Canna::CI600,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI600,22,
+212,Cui2016_Canna,Cui2016_Canna::CI600,Cd (II),pH_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,CI600,23,
+213,Cui2016_Wetland,Cui2016_Wetland::TD500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,TD500,24,
+214,Cui2016_Wetland,Cui2016_Wetland::TD500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,TD500,25,
+215,Cui2016_Wetland,Cui2016_Wetland::TD500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,TD500,26,
+216,Cui2016_Wetland,Cui2016_Wetland::PA500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,PA500,27,
+217,Cui2016_Wetland,Cui2016_Wetland::PA500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,PA500,28,
+218,Cui2016_Wetland,Cui2016_Wetland::PA500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,PA500,29,
+219,Cui2016_Wetland,Cui2016_Wetland::ZC500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,ZC500,30,
+220,Cui2016_Wetland,Cui2016_Wetland::ZC500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,ZC500,31,
+221,Cui2016_Wetland,Cui2016_Wetland::ZC500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,ZC500,32,
+222,Cui2016_Wetland,Cui2016_Wetland::ZC500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,ZC500,33,
+223,Cui2016_Wetland,Cui2016_Wetland::VZ500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,VZ500,34,
+224,Cui2016_Wetland,Cui2016_Wetland::VZ500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,VZ500,35,
+225,Cui2016_Wetland,Cui2016_Wetland::VZ500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,VZ500,36,
+226,Cui2016_Wetland,Cui2016_Wetland::VZ500,Cd (II),isotherm_series,1.0,24.0,not_reported_in_condition_audit,verified_compilation,True,True,VZ500,37,
+234,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,38,
+235,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,39,
+236,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,40,
+237,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,41,
+238,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,42,
+239,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,43,
+240,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,44,
+241,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,45,
+242,Gao2019,Gao2019::RS300,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,46,
+250,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,47,
+251,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,48,
+252,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,49,
+253,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,50,
+254,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,51,
+255,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,52,
+256,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,53,
+257,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,54,
+258,Gao2019,Gao2019::RS500,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,55,
+266,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,56,
+267,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,57,
+268,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,58,
+269,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,59,
+270,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,60,
+271,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,61,
+272,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,62,
+273,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,63,
+274,Gao2019,Gao2019::RS700,Cd (II),isotherm_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,64,
+227,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,65,
+228,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,66,
+229,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,67,
+230,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,68,
+231,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,69,
+232,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,70,
+233,Gao2019,Gao2019::RS300,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS300,71,
+243,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,72,
+244,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,73,
+245,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,74,
+246,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,75,
+247,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,76,
+248,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,77,
+249,Gao2019,Gao2019::RS500,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS500,78,
+259,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,79,
+260,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,80,
+261,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,81,
+262,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,82,
+263,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,83,
+264,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,84,
+265,Gao2019,Gao2019::RS700,Cd (II),pH_series,1.0,12.0,not_reported_in_condition_audit,verified_compilation,True,True,RS700,85,
+74,Zama2017,Zama2017::BWH350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH350,86,
+75,Zama2017,Zama2017::BWH350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH350,87,
+76,Zama2017,Zama2017::BWH350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH350,88,
+77,Zama2017,Zama2017::BWH450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH450,89,
+78,Zama2017,Zama2017::BWH450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH450,90,
+79,Zama2017,Zama2017::BWH450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH450,91,
+80,Zama2017,Zama2017::BWH550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH550,92,
+81,Zama2017,Zama2017::BWH550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH550,93,
+82,Zama2017,Zama2017::BWH550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH550,94,
+83,Zama2017,Zama2017::BWH650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH650,95,
+84,Zama2017,Zama2017::BWH650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH650,96,
+85,Zama2017,Zama2017::BWH650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH650,97,
+86,Zama2017,Zama2017::CC350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC350,98,
+87,Zama2017,Zama2017::CC350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC350,99,
+88,Zama2017,Zama2017::CC350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC350,100,
+89,Zama2017,Zama2017::CC450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC450,101,
+90,Zama2017,Zama2017::CC450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC450,102,
+91,Zama2017,Zama2017::CC450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC450,103,
+92,Zama2017,Zama2017::CC550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC550,104,
+93,Zama2017,Zama2017::CC550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC550,105,
+94,Zama2017,Zama2017::CC550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC550,106,
+95,Zama2017,Zama2017::CC650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC650,107,
+96,Zama2017,Zama2017::CC650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC650,108,
+97,Zama2017,Zama2017::CC650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC650,109,
+98,Zama2017,Zama2017::MW350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW350,110,
+99,Zama2017,Zama2017::MW350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW350,111,
+100,Zama2017,Zama2017::MW350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW350,112,
+101,Zama2017,Zama2017::MW450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW450,113,
+102,Zama2017,Zama2017::MW450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW450,114,
+103,Zama2017,Zama2017::MW450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW450,115,
+104,Zama2017,Zama2017::MW550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW550,116,
+105,Zama2017,Zama2017::MW550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW550,117,
+106,Zama2017,Zama2017::MW550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW550,118,
+107,Zama2017,Zama2017::MW650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW650,119,
+108,Zama2017,Zama2017::MW650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW650,120,
+109,Zama2017,Zama2017::MW650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW650,121,
+110,Zama2017,Zama2017::PS350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS350,122,
+111,Zama2017,Zama2017::PS350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS350,123,
+112,Zama2017,Zama2017::PS350,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS350,124,
+113,Zama2017,Zama2017::PS450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS450,125,
+114,Zama2017,Zama2017::PS450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS450,126,
+115,Zama2017,Zama2017::PS450,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS450,127,
+116,Zama2017,Zama2017::PS550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS550,128,
+117,Zama2017,Zama2017::PS550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS550,129,
+118,Zama2017,Zama2017::PS550,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS550,130,
+119,Zama2017,Zama2017::PS650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS650,131,
+120,Zama2017,Zama2017::PS650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS650,132,
+121,Zama2017,Zama2017::PS650,Cd (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS650,133,
+0,Jiang2016,Jiang2016::JWC700,Cu (II),pH_series,25.0,24.0,0.01 M Na2SO4,verified_compilation,True,True,JWC700,134,
+1,Jiang2016,Jiang2016::JWC700,Cu (II),pH_series,25.0,24.0,0.01 M Na2SO4,verified_compilation,True,True,JWC700,135,
+2,Jiang2016,Jiang2016::JWC700,Cu (II),pH_series,25.0,24.0,0.01 M Na2SO4,verified_compilation,True,True,JWC700,136,
+3,Jiang2016,Jiang2016::PWC700,Cu (II),pH_series,25.0,24.0,0.01 M Na2SO4,verified_compilation,True,True,PWC700,137,
+4,Jiang2016,Jiang2016::PWC700,Cu (II),pH_series,25.0,24.0,0.01 M Na2SO4,verified_compilation,True,True,PWC700,138,
+5,Jiang2016,Jiang2016::PWC700,Cu (II),pH_series,25.0,24.0,0.01 M Na2SO4,verified_compilation,True,True,PWC700,139,
+26,Zama2017,Zama2017::BWH350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH350,140,0
+27,Zama2017,Zama2017::BWH350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH350,141,1
+28,Zama2017,Zama2017::BWH350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH350,142,2
+29,Zama2017,Zama2017::BWH450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH450,143,3
+30,Zama2017,Zama2017::BWH450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH450,144,4
+31,Zama2017,Zama2017::BWH450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH450,145,5
+32,Zama2017,Zama2017::BWH550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH550,146,6
+33,Zama2017,Zama2017::BWH550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH550,147,7
+34,Zama2017,Zama2017::BWH550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH550,148,8
+35,Zama2017,Zama2017::BWH650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH650,149,9
+36,Zama2017,Zama2017::BWH650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH650,150,10
+37,Zama2017,Zama2017::BWH650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,BWH650,151,11
+38,Zama2017,Zama2017::CC350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC350,152,12
+39,Zama2017,Zama2017::CC350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC350,153,13
+40,Zama2017,Zama2017::CC350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC350,154,14
+41,Zama2017,Zama2017::CC450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC450,155,15
+42,Zama2017,Zama2017::CC450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC450,156,16
+43,Zama2017,Zama2017::CC450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC450,157,17
+44,Zama2017,Zama2017::CC550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC550,158,18
+45,Zama2017,Zama2017::CC550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC550,159,19
+46,Zama2017,Zama2017::CC550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC550,160,20
+47,Zama2017,Zama2017::CC650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC650,161,21
+48,Zama2017,Zama2017::CC650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC650,162,22
+49,Zama2017,Zama2017::CC650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,CC650,163,23
+50,Zama2017,Zama2017::MW350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW350,164,24
+51,Zama2017,Zama2017::MW350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW350,165,25
+52,Zama2017,Zama2017::MW350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW350,166,26
+53,Zama2017,Zama2017::MW450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW450,167,27
+54,Zama2017,Zama2017::MW450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW450,168,28
+55,Zama2017,Zama2017::MW450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW450,169,29
+56,Zama2017,Zama2017::MW550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW550,170,30
+57,Zama2017,Zama2017::MW550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW550,171,31
+58,Zama2017,Zama2017::MW550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW550,172,32
+59,Zama2017,Zama2017::MW650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW650,173,33
+60,Zama2017,Zama2017::MW650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW650,174,34
+61,Zama2017,Zama2017::MW650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,MW650,175,35
+62,Zama2017,Zama2017::PS350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS350,176,36
+63,Zama2017,Zama2017::PS350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS350,177,37
+64,Zama2017,Zama2017::PS350,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS350,178,38
+65,Zama2017,Zama2017::PS450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS450,179,39
+66,Zama2017,Zama2017::PS450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS450,180,40
+67,Zama2017,Zama2017::PS450,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS450,181,41
+68,Zama2017,Zama2017::PS550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS550,182,42
+69,Zama2017,Zama2017::PS550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS550,183,43
+70,Zama2017,Zama2017::PS550,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS550,184,44
+71,Zama2017,Zama2017::PS650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS650,185,45
+72,Zama2017,Zama2017::PS650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS650,186,46
+73,Zama2017,Zama2017::PS650,Pb (II),PTE_concentration_series,5.0,36.0,0.01 M NaNO3,verified_compilation,True,True,PS650,187,47
+532,Wang2021_invasive,Wang2021_invasive::BBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,188,
+533,Wang2021_invasive,Wang2021_invasive::BBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,189,
+534,Wang2021_invasive,Wang2021_invasive::BBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,190,
+535,Wang2021_invasive,Wang2021_invasive::BBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,191,
+536,Wang2021_invasive,Wang2021_invasive::PBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,192,
+537,Wang2021_invasive,Wang2021_invasive::PBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,193,
+538,Wang2021_invasive,Wang2021_invasive::PBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,194,
+539,Wang2021_invasive,Wang2021_invasive::PBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,195,
+540,Wang2021_invasive,Wang2021_invasive::IBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,196,
+541,Wang2021_invasive,Wang2021_invasive::IBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,197,
+542,Wang2021_invasive,Wang2021_invasive::IBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,198,
+543,Wang2021_invasive,Wang2021_invasive::IBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,199,
+544,Wang2021_invasive,Wang2021_invasive::MBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,200,
+545,Wang2021_invasive,Wang2021_invasive::MBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,201,
+546,Wang2021_invasive,Wang2021_invasive::MBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,202,
+547,Wang2021_invasive,Wang2021_invasive::MBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,203,
+548,Wang2021_invasive,Wang2021_invasive::LBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,204,
+549,Wang2021_invasive,Wang2021_invasive::LBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,205,
+550,Wang2021_invasive,Wang2021_invasive::LBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,206,
+551,Wang2021_invasive,Wang2021_invasive::LBC500,Cd (II),pH_series,0.5,24.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,207,
+552,Wang2021_invasive,Wang2021_invasive::BBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,208,
+553,Wang2021_invasive,Wang2021_invasive::BBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,209,
+554,Wang2021_invasive,Wang2021_invasive::BBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,210,
+555,Wang2021_invasive,Wang2021_invasive::BBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,211,
+556,Wang2021_invasive,Wang2021_invasive::BBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,212,
+557,Wang2021_invasive,Wang2021_invasive::BBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,BBC500,213,
+558,Wang2021_invasive,Wang2021_invasive::PBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,214,
+559,Wang2021_invasive,Wang2021_invasive::PBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,215,
+560,Wang2021_invasive,Wang2021_invasive::PBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,216,
+561,Wang2021_invasive,Wang2021_invasive::PBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,217,
+562,Wang2021_invasive,Wang2021_invasive::PBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,218,
+563,Wang2021_invasive,Wang2021_invasive::PBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,PBC500,219,
+564,Wang2021_invasive,Wang2021_invasive::IBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,220,
+565,Wang2021_invasive,Wang2021_invasive::IBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,221,
+566,Wang2021_invasive,Wang2021_invasive::IBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,222,
+567,Wang2021_invasive,Wang2021_invasive::IBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,223,
+568,Wang2021_invasive,Wang2021_invasive::IBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,224,
+569,Wang2021_invasive,Wang2021_invasive::IBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,IBC500,225,
+570,Wang2021_invasive,Wang2021_invasive::MBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,226,
+571,Wang2021_invasive,Wang2021_invasive::MBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,227,
+572,Wang2021_invasive,Wang2021_invasive::MBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,228,
+573,Wang2021_invasive,Wang2021_invasive::MBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,229,
+574,Wang2021_invasive,Wang2021_invasive::MBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,230,
+575,Wang2021_invasive,Wang2021_invasive::MBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,MBC500,231,
+576,Wang2021_invasive,Wang2021_invasive::LBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,232,
+577,Wang2021_invasive,Wang2021_invasive::LBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,233,
+578,Wang2021_invasive,Wang2021_invasive::LBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,234,
+579,Wang2021_invasive,Wang2021_invasive::LBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,235,
+580,Wang2021_invasive,Wang2021_invasive::LBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,236,
+581,Wang2021_invasive,Wang2021_invasive::LBC500,Cu (II),pH_series,1.0,30.0,not_reported_in_condition_audit,local_compilation_condition_supported,True,False,LBC500,237,
+12,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,48
+13,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,49
+14,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,50
+15,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,51
+16,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,52
+17,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,53
+18,Li2018,Li2018::WS600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,WS600,,54
+19,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,55
+20,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,56
+21,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,57
+22,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,58
+23,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,59
+24,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,60
+25,Li2018,Li2018::RH600,Pb (II),isotherm_series,1.0,24.0,0.01 M NaNO3,verified_compilation,True,True,RH600,,61

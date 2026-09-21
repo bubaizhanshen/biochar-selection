@@ -1,0 +1,106 @@
+{
+  "status": "retrospective_development_pilot_not_preregistered",
+  "purpose": "Development comparison on author-released experimental records after source-specific unit and condition harmonization; not independent-laboratory validation.",
+  "training_tiers": [
+    "public_experimental_cells"
+  ],
+  "training_policy": "Use reviewed released experimental rows after source-supported mappings. Exclude 15 pH=1 rows outside source protocol; retain signed measured response estimates, including negatives. Average rows with identical source/material/series/complete condition vector; do not call them verified replicates.",
+  "outer_holdout": "entire_source_study_id",
+  "external_sources": "None. These blocks are drawn from two existing public datasets from related research groups.",
+  "test_policy": "Common-condition complete grids within each source and experimental series; all rows of held-out candidates excluded from training, including unscored incomplete grids.",
+  "model_selection": "Fixed parameters for this development pilot; no model or feature selection using test loss. Final tuned analysis remains separate.",
+  "material_features": [
+    "C",
+    "H",
+    "N",
+    "O",
+    "Ash",
+    "SA"
+  ],
+  "condition_features": [
+    "T",
+    "pH_solution",
+    "C0_mg_L",
+    "dose_g_L",
+    "contact_time_h",
+    "ionic_strength_M",
+    "DOM_mg_L"
+  ],
+  "categorical_condition_features": [
+    "matrix",
+    "adsorption_mode",
+    "co_solute_set"
+  ],
+  "feature_policy": "Six directly reported shared descriptors. Source-coded nondetection values such as N=0 remain source encodings, not established true zeros. No final concentration, source identity, or predictor computed by our pipeline from test responses enters the model. Initial concentrations remain as released; no nominal-grid snapping. Their experimental acquisition logs were not independently recovered.",
+  "response": "Mass-normalized reported adsorption amount at recorded contact time (mg/g); kinetic qt remains annotated, not relabeled equilibrium qe. No qmax. Competitive IBU source converted from umol/g using factor 0.20628.",
+  "ridge": {
+    "alpha": 1
+  },
+  "svr": {
+    "kernel": "rbf",
+    "C": 10,
+    "epsilon": 0.1,
+    "gamma": "scale"
+  },
+  "random_forest": {
+    "n_estimators": 300,
+    "min_samples_leaf": 2,
+    "max_features": 1,
+    "random_state": 1729,
+    "n_jobs": 1
+  },
+  "scaling": "Training-only predictor and response standardization; equal cell fitting weights. Cell spread is not treated as a sampling standard error.",
+  "primary_loss": "max observed capacity minus expected observed capacity of uniformly selected prediction maximizers",
+  "baseline": "Uniform candidate selection within the identical condition; expected loss computed exactly",
+  "ties": "Prediction tie absolute tolerance 1e-12; observed ties use recorded values. This is not experimental uncertainty.",
+  "aggregation": "First mean conditions within series; mean series within source; never count multiple series as independent studies. Report pollutant tasks separately.",
+  "known_limits": "Source-related experimental releases, unresolved physical batch independence, uncertain repeated-row identities and absent original replicate logs. Corrected-label/time/unit mappings and aggregation need sensitivity analysis before manuscript use. CBZ currently has one reviewed source and is not model-evaluable.",
+  "allowed_provenance_by_training_tier": {
+    "public_experimental_cells": [
+      "author_released_experimental_data_protocol_harmonized"
+    ]
+  },
+  "inner_parameter_candidates": {
+    "ridge": [
+      {
+        "alpha": 0.1
+      },
+      {
+        "alpha": 1
+      },
+      {
+        "alpha": 10
+      }
+    ],
+    "svr": [
+      {
+        "C": 1
+      },
+      {
+        "C": 10
+      },
+      {
+        "C": 100
+      }
+    ],
+    "random_forest": [
+      {
+        "min_samples_leaf": 1
+      },
+      {
+        "min_samples_leaf": 2
+      },
+      {
+        "min_samples_leaf": 4
+      }
+    ]
+  },
+  "tuning_scope": {
+    "objective": "Mean validation-source MAE, equal source weighting, original response units.",
+    "split": "Leave one outer-training source out; no outer test outcomes.",
+    "fallback": "Fewer than two training sources: unchanged fixed parameters.",
+    "tie": "First declared parameter candidate on exact mean-MAE tie.",
+    "status": "Development sensitivity after fixed-pilot inspection; not preregistered.",
+    "limitations": "No algorithm-family winner chosen from outer outcomes. Two-source tuning uses one source per inner training fold."
+  }
+}

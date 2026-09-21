@@ -1,0 +1,34 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.tiff
+.DS_Store
+work/
+
+# Local documents, artwork, downloaded articles, and credentials are not code assets.
+*.doc
+*.docx
+*.pdf
+*.png
+*.svg
+*.pptx
+*.enl
+*.enlx
+*.Data/
+.env
+.env.*
+*.pem
+*.key
+
+# Acquire source workbooks separately. These rules do not untrack historical files.
+*.xlsx
+*.xls
+
+# Generated observations, predictions, and local reruns are not release assets.
+results/
+*.xml
+*.zip
+*.jpg
+*.jpeg
+*.tif
