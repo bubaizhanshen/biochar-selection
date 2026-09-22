@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 from panel_input import validate_split
+from model_registry import configured_models
 from run_selection_benchmark import estimator, evaluate_conditions, training_fit_rows
 
 MODELS = ('ridge', 'svr', 'random_forest')
@@ -51,6 +52,10 @@ def evaluate(strategy, train, test, config):
     if not metrics: raise ValueError('No complete candidate conditions')
     frame = pd.DataFrame(metrics)
     scores = frame.groupby('series')[['selection_loss', 'mae']].mean().mean()
+    if strategy in ('surface_area', 'random'):
+        scores['mae'] = np.nan
+        for metric in metrics:
+            metric['mae'] = np.nan
     return pred, metrics, coverage, dict(loss=float(scores.selection_loss), mae=float(scores.mae))
 
 
@@ -58,6 +63,8 @@ def run(data_path, manifest_path, protocol_path, out):
     if out.exists() and any(out.iterdir()): raise ValueError('Output must be empty')
     data, manifest = pd.read_csv(data_path), pd.read_csv(manifest_path)
     config = json.loads(protocol_path.read_text())
+    models = configured_models(config)
+    strategies = ('surface_area', 'random', *models)
     validate_inputs(data, manifest, config)
     if 'inner_parameter_candidates' in config:
         raise ValueError('This comparison requires fixed model parameters')
@@ -68,8 +75,9 @@ def run(data_path, manifest_path, protocol_path, out):
     data.to_csv(out/'executed_input.csv', index=False)
     manifest.to_csv(out/'executed_manifest.csv', index=False)
     (out/'protocol.json').write_text(json.dumps(dict(model_config=config,
-        strategy_order=STRATEGIES, scope='Retrospective fixed-model development comparison'), indent=2)+'\n')
+        strategy_order=strategies, scope='Retrospective fixed-model development comparison'), indent=2)+'\n')
     trials, predictions, conditions, decisions = [], [], [], []
+    outer_results, outer_conditions = [], []
     for _, panel in manifest.iterrows():
         if panel.holdout_unit != 'study_block': raise ValueError('Source holdout required')
         task = data[data.pollutant.eq(panel.contaminant)].reset_index(drop=True)
@@ -78,7 +86,7 @@ def run(data_path, manifest_path, protocol_path, out):
         sources = sorted(train.source_study_id.unique())
         if len(sources) < 2: raise ValueError('At least two inner sources required')
         scores = {}
-        for strategy in STRATEGIES:
+        for strategy in strategies:
             inner = []
             for source in sources:
                 fit = train[train.source_study_id.ne(source)]
@@ -95,14 +103,18 @@ def run(data_path, manifest_path, protocol_path, out):
                 conditions.extend(dict(**meta, **m) for m in metrics)
             scores[strategy] = {key: float(np.mean([r[key] for r in inner])) for key in ('mae', 'loss')}
         selected = {
-            'fixed_models_mae': choose(scores, 'mae', MODELS),
-            'fixed_models_selection_loss': choose(scores, 'loss', MODELS),
-            'models_and_rules_selection_loss': choose(scores, 'loss', STRATEGIES),
+            'fixed_models_mae': choose(scores, 'mae', models),
+            'fixed_models_selection_loss': choose(scores, 'loss', models),
+            'models_and_rules_selection_loss': choose(scores, 'loss', strategies),
         }
         outer = {}
-        for strategy in STRATEGIES:
-            pred, _, _, score = evaluate(strategy, train, test, config)
+        for strategy in strategies:
+            pred, metrics, _, score = evaluate(strategy, train, test, config)
             outer[strategy] = score['loss']
+            meta = dict(panel_id=panel.panel_id, source=panel.test_source,
+                        pollutant=panel.contaminant, strategy=strategy)
+            outer_results.append(dict(**meta, **score, n_conditions=len(metrics)))
+            outer_conditions.extend(dict(**meta, **m) for m in metrics)
             for (_, r), value in zip(test.iterrows(), pred):
                 predictions.append(dict(panel_id=panel.panel_id, strategy=strategy,
                     inner_source='', stage='outer', row_id=r.source_table_row_id,
@@ -112,7 +124,8 @@ def run(data_path, manifest_path, protocol_path, out):
                 pollutant=panel.contaminant, selector=selector, selected_strategy=strategy,
                 outer_loss=outer[strategy]))
         for name, rows in [('inner_trials', trials), ('predictions', predictions),
-                           ('inner_conditions', conditions), ('decisions', decisions)]:
+                           ('inner_conditions', conditions), ('decisions', decisions),
+                           ('outer_results', outer_results), ('outer_conditions', outer_conditions)]:
             pd.DataFrame(rows).to_csv(out/f'{name}.csv', index=False)
         print(panel.panel_id, selected, flush=True)
     (out/'completed.json').write_text(json.dumps(dict(outer_folds=len(manifest)))+'\n')

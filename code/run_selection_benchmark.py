@@ -15,11 +15,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer, TransformedTargetRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import Ridge
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.svm import SVR
+from model_registry import configured_models, make_regressor
 
 from panel_input import validate_split
 from selection_metrics import selection_metrics
@@ -31,12 +29,7 @@ def estimator(name, full, config):
         ('numeric', StandardScaler(), numeric),
         ('matrix', OneHotEncoder(handle_unknown='ignore', sparse_output=False), config['categorical_condition_features']),
     ])
-    models = {
-        'ridge': lambda: Ridge(**config['ridge']),
-        'svr': lambda: SVR(**config['svr']),
-        'random_forest': lambda: RandomForestRegressor(**config['random_forest']),
-    }
-    pipe = Pipeline([('inputs', columns), ('model', models[name]())])
+    pipe = Pipeline([('inputs', columns), ('model', make_regressor(name, config[name]))])
     return TransformedTargetRegressor(regressor=pipe, transformer=StandardScaler())
 
 
@@ -167,7 +160,7 @@ def run(data_path, manifest_path, protocol_path, out):
                 splits.append({'panel_id': row.panel_id, 'role': role, **item})
         candidates = set(json.loads(row.candidate_materials_json))
         fitting_rows = training_fit_rows(train, config)
-        for name in ('ridge', 'svr', 'random_forest'):
+        for name in configured_models(config):
             for full in (False, True):
                 model_id = name + ('_full' if full else '_condition_only')
                 begin = time.monotonic()

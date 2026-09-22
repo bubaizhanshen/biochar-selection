@@ -1,0 +1,9 @@
+{
+  "models": ["ridge", "svr", "random_forest", "extra_trees", "gradient_boosting", "xgboost", "lightgbm", "catboost", "knn"],
+  "extra_trees": {"n_estimators": 300, "min_samples_leaf": 2, "max_features": 1.0, "random_state": 1729, "n_jobs": 1},
+  "gradient_boosting": {"n_estimators": 300, "learning_rate": 0.05, "max_depth": 3, "min_samples_leaf": 2, "loss": "squared_error", "random_state": 1729},
+  "xgboost": {"n_estimators": 300, "learning_rate": 0.05, "max_depth": 3, "min_child_weight": 1, "subsample": 1.0, "colsample_bytree": 1.0, "reg_lambda": 1.0, "objective": "reg:squarederror", "tree_method": "hist", "random_state": 1729, "n_jobs": 1},
+  "lightgbm": {"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 15, "max_depth": -1, "min_child_samples": 10, "subsample": 1.0, "colsample_bytree": 1.0, "reg_lambda": 1.0, "random_state": 1729, "n_jobs": 1, "deterministic": true, "force_col_wise": true, "verbosity": -1},
+  "catboost": {"iterations": 300, "learning_rate": 0.05, "depth": 6, "l2_leaf_reg": 3.0, "loss_function": "RMSE", "random_seed": 1729, "thread_count": 1, "verbose": false, "allow_writing_files": false},
+  "knn": {"n_neighbors": 5, "weights": "distance", "p": 2, "n_jobs": 1}
+}

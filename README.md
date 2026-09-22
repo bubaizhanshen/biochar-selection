@@ -7,7 +7,8 @@ same fixed models, inner validation conditions, and weights.
 
 This package contains code, configuration, source annotations, and tests. It
 does not contain original workbooks, experimental response tables, article full
-text, manuscripts, figures, or historical analysis outputs. Obtain source files
+text, manuscripts, figures, or full historical analysis outputs. A small aggregate
+reference fixture is included for regression testing. Obtain source files
 separately under their original terms; see [data preparation](docs/selection_data.md).
 
 ## Install and Test
@@ -51,6 +52,18 @@ across IBU and Sr. These are retrospective development data, not independent
 experiment counts or a prospective test set. Models are selected within training
 sources, never using the outer source's outcomes. Ties use the declared strategy
 order; all source-specific outcomes, including failures, remain in the output.
+
+## Additional Models
+
+The [nine-model comparison](docs/model_expansion.md) adds Extra Trees,
+gradient boosting, XGBoost, LightGBM, CatBoost and k-nearest neighbors, retaining
+the original source splits and training-only model selection. The three-model
+configuration remains available for reproducing the earlier comparison.
+
+The [numerical sensitivity check](docs/numerical_sensitivity.md) crosses fitting
+precision and seeds without changing evaluation observations. It reports all
+settings, per-fold support, and both model-selection criteria; it does not choose
+a favorable seed or treat numerical ranges as confidence intervals.
 
 ## Feature Controls
 
