@@ -57,6 +57,9 @@ output directory. Use the unexpanded protocol to reproduce the three-model
 reference. Fixed-model sensitivities and separate Cd/Cu/Pb cases are described
 in the preparation guide.
 Additional metal cases require HM2.xlsx and lawfully obtained Lee article XML.
+The [Cd source-family selection check](docs/selection_data.md#separate-metal-cases)
+uses those prepared inputs and withholds both Cui records together; it is a
+retrospective sensitivity rather than a fourth main task.
 
 The main inputs comprise 595 cells, 1,704 released records, and six source groups
 across IBU and Sr. These are retrospective development data, not independent

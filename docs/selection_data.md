@@ -123,6 +123,23 @@ from the six-source IBU/Sr experiment and must not be pooled with its folds.
 See [metal annotations](../data/metal_annotations/README.md) for conversion
 constants, provenance tiers, row ordering, and the Lee/Kim legacy-key mapping.
 
+The exploratory Cd source-family selection check uses the same prepared metal
+input. It withholds both Cui records together and leaves out Gao or Zama as the
+other test families. The Wang rows enter only expanded-tier fitting, never
+validation or testing. It compares three- and nine-model choices made by inner
+MAE or selection loss, with an additional model-plus-property-rule comparison:
+
+```bash
+python code/run_cd_family_selection.py \
+  --data work/metal_inputs/metal_input.csv \
+  --protocol work/metal_inputs/metal_protocol.json \
+  --out work/cd_family_selection
+```
+
+This is a retrospective sensitivity, not an independent test or a new main
+analysis fold. The output directory contains executed split membership,
+condition and family scores, model predictions, decisions, and input hashes.
+
 ## Fixed-Model Sensitivities
 
 The four training policies for the six-source fixed-model comparison use
