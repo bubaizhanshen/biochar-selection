@@ -3,10 +3,17 @@ import unittest
 import numpy as np
 import pandas as pd
 
-from audit_physical_projection import score_conditions, series_balanced
+from audit_physical_projection import nominal_upper_bound, score_conditions, series_balanced
 
 
 class PhysicalProjectionTest(unittest.TestCase):
+    def test_nominal_bound_uses_shared_condition_precision(self):
+        frame = pd.DataFrame({
+            "C0_mg_L": [10.0, 10.00000000001],
+            "dose_g_L": [2.0, 2.00000000001],
+        })
+        np.testing.assert_array_equal(nominal_upper_bound(frame), [5.0, 5.0])
+
     def test_out_of_range_scores_can_become_a_candidate_tie(self):
         frame = pd.DataFrame({
             "material_group": ["a", "b", "c"],

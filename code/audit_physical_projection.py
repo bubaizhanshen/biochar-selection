@@ -41,6 +41,15 @@ def series_balanced(frame: pd.DataFrame, metric: str) -> float:
     return float(frame.groupby("series", sort=True)[metric].mean().mean())
 
 
+def nominal_upper_bound(test: pd.DataFrame) -> np.ndarray:
+    # Match the precision used to define a shared candidate condition.
+    concentration = test.C0_mg_L.round(8).to_numpy(float)
+    dose = test.dose_g_L.round(8).to_numpy(float)
+    if (concentration <= 0).any() or (dose <= 0).any():
+        raise ValueError("Nonpositive nominal concentration or dose")
+    return concentration / dose
+
+
 def audit_run(run: Path, mode: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     data = pd.read_csv(run / "executed_input.csv")
     predictions = pd.read_csv(run / "predictions.csv")
@@ -70,9 +79,7 @@ def audit_run(run: Path, mode: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.Data
                           left_on="source_table_row_id", right_on="row_id", validate="one_to_one")
         if not np.allclose(test.response_mg_g, test.observed, rtol=0, atol=1e-8):
             raise ValueError("Saved predictions disagree with source observations")
-        if test.C0_mg_L.le(0).any() or test.dose_g_L.le(0).any():
-            raise ValueError("Nonpositive concentration or dose")
-        bound = (test.C0_mg_L / test.dose_g_L).to_numpy(float)
+        bound = nominal_upper_bound(test)
         original = test.predicted.to_numpy(float)
         is_model = record.strategy not in {"surface_area", "random"}
         projected = np.clip(original, 0, bound) if is_model else original.copy()
