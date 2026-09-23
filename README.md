@@ -79,6 +79,21 @@ It does not clip predictions, change candidate choices, or interpret cell counts
 as independent-study failure rates. Run it separately for each training
 representation.
 
+To score a separate post hoc physical-bound sensitivity, place the two
+nine-model outputs in `cell_mean/` and `original_response/` under one directory:
+
+```bash
+python code/audit_physical_projection.py \
+  --runs-root work/nine_model_runs \
+  --out-dir work/physical_projection
+```
+
+This projects saved outer model predictions to zero through the nominal
+initial-concentration / dose limit, then rescores the unchanged candidate
+grids. It reproduces the original outer losses before projection and keeps
+training-selected strategies fixed. The result is a diagnostic, not a newly
+trained constrained model.
+
 ## Feature Controls
 
 To compare full, material-only, and condition-only inputs for all three fixed
