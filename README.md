@@ -18,9 +18,14 @@ Python 3.13.2 was used for the verified local runs.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-models.txt
 make test
 ```
+
+This installs the pinned XGBoost, LightGBM, and CatBoost versions needed for the
+manuscript's nine-model comparison. For the three-model reference alone,
+`requirements.txt` is sufficient; the extra-model tests are skipped if those
+packages are absent.
 
 ## Prepare and Run
 
