@@ -35,11 +35,15 @@ python code/prepare_selection_data.py \
   --ec-workbook /path/to/Raw_data.xlsx \
   --out work/selection_inputs
 
+python code/expand_model_protocol.py \
+  --base work/selection_inputs/bundle/cell_mean_protocol.json \
+  --out work/nine_model_protocol.json
+
 python code/run_strategy_selection.py \
   --data work/selection_inputs/bundle/cell_mean.csv \
   --manifest work/selection_inputs/bundle/manifest.csv \
-  --protocol work/selection_inputs/bundle/cell_mean_protocol.json \
-  --out work/selection_cell_mean
+  --protocol work/nine_model_protocol.json \
+  --out work/nine_model_cell_mean
 ```
 
 Use the author-released workbooks linked in the preparation guide, without
@@ -47,9 +51,11 @@ re-saving them. Very small response-value changes altered some model choices
 in the numerical reproducibility check; matching record counts alone is not
 sufficient to verify the inputs.
 
-For original-response training, substitute `original_response.csv` and
-`original_response_protocol.json` and use a new output directory. Fixed-model
-sensitivities and separate Cd/Cu/Pb cases are described in the preparation guide.
+For original-response training, expand `original_response_protocol.json` into
+its own nine-model protocol, then run with `original_response.csv` and a new
+output directory. Use the unexpanded protocol to reproduce the three-model
+reference. Fixed-model sensitivities and separate Cd/Cu/Pb cases are described
+in the preparation guide.
 Additional metal cases require HM2.xlsx and lawfully obtained Lee article XML.
 
 The main inputs comprise 595 cells, 1,704 released records, and six source groups
@@ -58,9 +64,9 @@ experiment counts or a prospective test set. Models are selected within training
 sources, never using the outer source's outcomes. Ties use the declared strategy
 order; all source-specific outcomes, including failures, remain in the output.
 
-## Additional Models
+## Model Sets and Sensitivities
 
-The [nine-model comparison](docs/model_expansion.md) adds Extra Trees,
+The manuscript's [nine-model comparison](docs/model_expansion.md) adds Extra Trees,
 gradient boosting, XGBoost, LightGBM, CatBoost and k-nearest neighbors, retaining
 the original source splits and training-only model selection. The three-model
 configuration remains available for reproducing the earlier comparison.
