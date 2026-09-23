@@ -65,6 +65,20 @@ precision and seeds without changing evaluation observations. It reports all
 settings, per-fold support, and both model-selection criteria; it does not choose
 a favorable seed or treat numerical ranges as confidence intervals.
 
+For an optional response-plausibility check after a nine-model run:
+
+```bash
+python code/audit_response_bounds.py \
+  --run-dir work/nine_model_results \
+  --out-dir work/response_bounds_cell_mean
+```
+
+The command counts predictions below zero or above the initial-concentration /
+adsorbent-dose mass-balance limit, separately from observed-value exceptions.
+It does not clip predictions, change candidate choices, or interpret cell counts
+as independent-study failure rates. Run it separately for each training
+representation.
+
 ## Feature Controls
 
 To compare full, material-only, and condition-only inputs for all three fixed
