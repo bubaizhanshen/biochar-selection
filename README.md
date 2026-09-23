@@ -94,6 +94,21 @@ grids. It reproduces the original outer losses before projection and keeps
 training-selected strategies fixed. The result is a diagnostic, not a newly
 trained constrained model.
 
+To apply the same bound to inner validation before selecting a strategy, then
+to outer predictions, use the saved runs and the previous projection output:
+
+```bash
+python code/audit_bounded_selection.py \
+  --runs-root work/nine_model_runs \
+  --bounds-dir work/physical_projection \
+  --out-dir work/bounded_selection
+```
+
+This check reproduces the original inner scores and choices first. It may
+change the training-selected strategy, but never uses held-out responses for
+that choice. Clipping is post hoc and can create artificial ties; neither
+command fits a physically constrained model.
+
 ## Feature Controls
 
 To compare full, material-only, and condition-only inputs for all three fixed
