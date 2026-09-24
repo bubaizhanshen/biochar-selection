@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import argparse
 from pathlib import Path
@@ -224,9 +223,7 @@ def main() -> None:
     for name, records in outputs.items():
         pd.DataFrame(records).to_csv(args.out / name, index=False)
     provenance = {
-        "input_sha256": hashlib.sha256(input_path.read_bytes()).hexdigest(),
-        "base_protocol_sha256": hashlib.sha256(base_path.read_bytes()).hexdigest(),
-        "model_extension_sha256": hashlib.sha256(args.extension.read_bytes()).hexdigest(),
+        "input_files": [input_path.name, base_path.name, args.extension.name],
         "test_families": TEST_FAMILIES,
         "model_sets": MODEL_SETS,
     }

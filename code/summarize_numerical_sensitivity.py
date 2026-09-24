@@ -8,6 +8,13 @@ import pandas as pd
 from run_numerical_sensitivity import PRECISIONS, SEEDS
 
 
+def input_filenames(contract):
+    if 'input_files' in contract:
+        return contract['input_files']
+    legacy_inputs = contract.get('inputs', {})
+    return sorted(legacy_inputs) if isinstance(legacy_inputs, dict) else legacy_inputs
+
+
 def summarize(paths, out):
     if out.exists():
         raise FileExistsError(out)
@@ -37,11 +44,12 @@ def summarize(paths, out):
     for key, group in data.groupby(['policy', 'source', 'model_count', 'selector']):
         if set(zip(group.precision, group.seed)) != expected_grid:
             raise ValueError(f'Full four-precision/five-seed grid required: {key}')
-    # Require the same input versions and protocol within each training policy.
+    # Require the same input filenames and protocol within each training policy.
     for policy in data.policy.unique():
         contracts = [r for r in runs if r['policy'] == policy]
         reference = contracts[0]
-        if any(r['inputs'] != reference['inputs'] or r['model_config'] != reference['model_config']
+        if any(input_filenames(r) != input_filenames(reference)
+               or r['model_config'] != reference['model_config']
                for r in contracts[1:]):
             raise ValueError(f'Input or code versions differ within {policy}')
     source = data.groupby(['policy', 'source', 'pollutant', 'model_count', 'selector']).agg(

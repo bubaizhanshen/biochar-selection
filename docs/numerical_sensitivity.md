@@ -51,7 +51,7 @@ and seed 1729 against a previous run; it is not an external-validation option.
   the legacy condition-level `mae` field compares unlike score scales and must
   not be interpreted as prediction error; the outer/inner score tables mask it.
 - `support.csv`: material counts, centered descriptor rank, and unseen categories.
-- `contract.json` and `completed.json`: settings, input identities, and completion.
+- `contract.json` and `completed.json`: settings, input filenames, and completion.
 
 The summary gives source-level ranges, selected-model frequencies, and task means
 with equal source weights. All settings are included. A three-model reference is

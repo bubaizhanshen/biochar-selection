@@ -78,18 +78,9 @@ outcome. Compare source-level model choices as well as aggregate scores when
 checking a reproduction. These differences concern numerical computation, not
 experimental measurement uncertainty.
 
-For an exact-byte check of the released copies used here, the SHA-256 digests
-are:
-
-```text
-2074a592c184aa680f321d5d28f4c8371dba1c249c915a67352cc7e2e4fc725d  HMI_data.xlsx
-bbcb3e6b89b5186770a25cc89479a819680200895412f52694bc1de13f19a115  Raw_data.xlsx
-9b7a19fa115075448a7497187c991cd7035e971a2ec6e31930dd7d96d014ff2b  bundle/cell_mean.csv
-```
-
-The last digest is for the prepared file under the pinned Python dependencies.
-These fingerprints identify the input version; they are not evidence of
-experimental independence or measurement accuracy.
+Record the source workbook filenames and software environment used for each
+reproduction. The listed released workbooks and preparation instructions define
+the intended inputs.
 
 ## Separate Metal Cases
 
@@ -138,7 +129,7 @@ python code/run_cd_family_selection.py \
 
 This is a retrospective sensitivity, not an independent test or a new main
 analysis fold. The output directory contains executed split membership,
-condition and family scores, model predictions, decisions, and input hashes.
+condition and family scores, model predictions, decisions, and input filenames.
 
 ## Fixed-Model Sensitivities
 

@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'code'))
 import numpy as np
 import pandas as pd
 from run_numerical_sensitivity import score, training_diagnostic, candidate_probabilities, support
+from summarize_numerical_sensitivity import input_filenames
 
 
 class SensitivityTests(unittest.TestCase):
@@ -54,6 +55,12 @@ class SensitivityTests(unittest.TestCase):
         self.assertTrue(np.isnan(scores['mae']))
         self.assertTrue(all(np.isnan(m['mae']) for m in metrics))
         self.assertEqual(scores['loss'], 0.)
+
+    def test_input_filenames_accept_new_and_legacy_contracts(self):
+        self.assertEqual(input_filenames({'input_files': ['data.csv', 'run.py']}),
+                         ['data.csv', 'run.py'])
+        self.assertEqual(input_filenames({'inputs': {'run.py': 'old-value', 'data.csv': 'old-value'}}),
+                         ['data.csv', 'run.py'])
 
 
 if __name__ == '__main__':

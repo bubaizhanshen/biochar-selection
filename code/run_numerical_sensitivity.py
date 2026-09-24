@@ -1,7 +1,6 @@
 """Full source-grid numerical sensitivity; evaluation responses remain unchanged."""
 import argparse
 import copy
-import hashlib
 import json
 from pathlib import Path
 import warnings
@@ -101,8 +100,7 @@ def run(data_path, manifest_path, protocol_path, out, policy, precision,
     receipt = dict(policy=policy, precision=precision, seeds=seeds, model_config=config,
         rounding='Fitting responses only, after original-response expansion',
         inference='Computational sensitivity, not confidence intervals',
-        inputs={p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-                for p in [data_path, manifest_path, protocol_path, Path(__file__)]})
+        input_files=[p.name for p in [data_path, manifest_path, protocol_path, Path(__file__)]])
     (out / 'contract.json').write_text(json.dumps(receipt, indent=2) + '\n')
     strategies = ('surface_area', 'random', *models)
     cache = {}
