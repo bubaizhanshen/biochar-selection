@@ -9,8 +9,10 @@ This package contains code, configuration, source annotations, tests, and one
 screened As(V) analysis table derived from cited publications. It does not
 contain the original workbooks, article full text, manuscripts, figures, or full
 historical analysis outputs. A small aggregate reference fixture is included
-for regression testing. The IBU/Sr/Cd response workbooks must be obtained
-separately under their original terms; see [data preparation](docs/selection_data.md).
+for regression testing. The IBU/Sr inputs are author-released workbooks; separate
+Cd/Cu/Pb comparisons use selected rows mapped to published supplementary and
+source-article data. Input access and reconstruction are described in
+[data preparation](docs/selection_data.md); source files are not bundled.
 The As(V) input provenance, screening, and data-use limits are documented in
 [`data/asv/README.md`](data/asv/README.md).
 

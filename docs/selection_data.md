@@ -84,14 +84,22 @@ the intended inputs.
 
 ## Separate Metal Cases
 
-The additional Cd/Cu/Pb cases use `HM2.xlsx` from Zhu et al., *The application
-of machine learning methods for prediction of metal sorption onto biochars*,
-Journal of Hazardous Materials 378 (2019), 120727, DOI
+The separate Cd/Cu/Pb cases use row-indexed inputs from a local `HM2.xlsx`
+compilation and source data from Zhu et al., *The application of machine
+learning methods for prediction of metal sorption onto biochars*, *Journal of
+Hazardous Materials* 378 (2019), 120727, DOI
 [10.1016/j.jhazmat.2019.06.004](https://doi.org/10.1016/j.jhazmat.2019.06.004).
-They also require user-supplied article XML for Lee et al., DOI
-[10.1016/j.jenvman.2019.01.100](https://doi.org/10.1016/j.jenvman.2019.01.100),
-to extract the experimental response and characterization tables. The article
-file is not bundled or downloaded automatically.
+Of the 252 annotated workbook rows, 202 map to response rows in Zhu et al.'s
+published Supporting Information. The other 50 are figure-derived Wang et al.
+records used only in the expanded-training sensitivity; they are not part of
+the Zhu compilation. The selected rows and their roles are listed in
+`data/metal_annotations/rows.csv`; the full workbook is not included, and its
+other rows are not attributed to Zhu et al. The Lee et al. comparison uses
+descriptors and experimental capacities from Tables 1 and 2 of the article
+(DOI [10.1016/j.jenvman.2019.01.100](https://doi.org/10.1016/j.jenvman.2019.01.100)).
+Reconstruction requires a locally available `HM2.xlsx` and lawfully obtained
+XML for the Lee article. Neither file is bundled or downloaded automatically;
+original source terms apply.
 
 ```bash
 python code/prepare_metal_selection_data.py \
