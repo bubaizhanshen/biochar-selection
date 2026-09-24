@@ -5,11 +5,14 @@ choice under common recorded adsorption conditions. The main experiment compares
 training-only model selection by response MAE and by selection loss, using the
 same fixed models, inner validation conditions, and weights.
 
-This package contains code, configuration, source annotations, and tests. It
-does not contain original workbooks, experimental response tables, article full
-text, manuscripts, figures, or full historical analysis outputs. A small aggregate
-reference fixture is included for regression testing. Obtain source files
+This package contains code, configuration, source annotations, tests, and one
+screened As(V) analysis table derived from cited publications. It does not
+contain the original workbooks, article full text, manuscripts, figures, or full
+historical analysis outputs. A small aggregate reference fixture is included
+for regression testing. The IBU/Sr/Cd response workbooks must be obtained
 separately under their original terms; see [data preparation](docs/selection_data.md).
+The As(V) input provenance, screening, and data-use limits are documented in
+[`data/asv/README.md`](data/asv/README.md).
 
 ## Install and Test
 
@@ -61,15 +64,14 @@ The [Cd source-family selection check](docs/selection_data.md#separate-metal-cas
 uses those prepared inputs and withholds both Cui records together; it is a
 retrospective sensitivity rather than a fourth main task.
 
-The separate [As(V) source-held-out comparison](docs/asv_source_selection.md)
-uses a source-screened table reconstructed from Su et al.'s SI and cited primary
-studies. It is an exploratory branch, not part of the primary IBU/Sr/Cd analysis.
-The response table is not redistributed in this repository; the document lists
-its source crosswalk, required columns, exclusions, and commands for rebuilding
-the analysis input.
+The separate [As(V) study-block holdout comparison](docs/asv_source_selection.md)
+uses the screened table at [`data/asv/analysis_input.csv`](data/asv/analysis_input.csv).
+It is an exploratory branch, not part of the primary IBU/Sr/Cd analysis. The
+table is derived from cited publications; its source crosswalk, screening rules,
+column definitions, and limitations are documented alongside the file.
 
-The main inputs comprise 595 cells, 1,704 released records, and six source groups
-across IBU and Sr. These are retrospective development data, not independent
+The primary IBU/Sr inputs comprise 595 cells, 1,704 released records, and six
+source groups. These are retrospective development data, not independent
 experiment counts or a prospective test set. Models are selected within training
 sources, never using the outer source's outcomes. Ties use the declared strategy
 order; all source-specific outcomes, including failures, remain in the output.
@@ -152,7 +154,8 @@ and the executed protocol and manifest. Use a new output directory for each run.
 
 - `code/`: data preparation, metrics, and experiment runners.
 - `config/`: fixed experiment and sensitivity settings.
-- `data/`: source-row annotations and split definitions, without responses.
+- `data/`: source-row annotations, split definitions, and the separately
+  documented As(V) analysis input.
 - `tests/`: input, split, model-selection, and metric tests.
 - `docs/`: source provenance and execution instructions.
 

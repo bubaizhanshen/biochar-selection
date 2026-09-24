@@ -2,6 +2,11 @@
 
 ## Prepared Selection Inputs
 
+The exploratory As(V) input is distributed separately at
+[`data/asv/analysis_input.csv`](data/asv/analysis_input.csv). Its complete
+column dictionary, source crosswalk, screening rules, and grouping caveats are
+in [`data/asv/README.md`](data/asv/README.md).
+
 The portable strategy runner accepts an externally prepared cell table and an
 explicit manifest. This interface does not by itself certify source eligibility.
 
@@ -26,8 +31,7 @@ Incomplete grids are excluded from decision scoring, not silently completed.
 
 The manifest declares `holdout_unit=study_block`, explicit training and test
 cell IDs, the complete candidate set, and expected support counts. At least two
-training sources are required for the inner source-held-out comparison. All
+training sources are required for the inner study-block holdout comparison. All
 inner choices precede evaluation on the outer source. Exact objective ties use
 the declared strategy order; prediction ties instead use the numerical tolerance
 specified by the metric implementation.
-

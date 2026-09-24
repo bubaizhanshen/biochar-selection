@@ -1,4 +1,6 @@
+import json
 import unittest
+from pathlib import Path
 
 import pandas as pd
 
@@ -70,6 +72,47 @@ class AsvSourceSelectionTest(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "Missing required values"):
             validate_data(frame, self.config())
+
+    def test_packaged_input_has_documented_source_and_row_provenance(self):
+        root = Path(__file__).resolve().parents[1]
+        data_path = root / "data" / "asv" / "analysis_input.csv"
+        config_path = root / "config" / "asv_source_selection.json"
+        frame = pd.read_csv(data_path)
+        config = json.loads(config_path.read_text())
+
+        self.assertEqual(len(frame), 138)
+        self.assertEqual(frame["reference"].nunique(), 9)
+        self.assertEqual(
+            set(frame["reference"]),
+            set(config["test_sources"] + config["training_only_sources"]),
+        )
+        self.assertEqual(
+            frame["source_rows_origin"].value_counts().to_dict(),
+            {
+                "Su2025_SI_Table_S2": 96,
+                "Sun2022_Figure_3_digitized_AsV": 30,
+                "Alchouron_thesis_Figure_3.2_digitized": 12,
+            },
+        )
+        self.assertEqual(frame["source_material_label"].isna().sum(), 81)
+        self.assertEqual(frame["material_group"].nunique(), 23)
+        self.assertTrue(
+            all(
+                group.startswith(f"{reference}::profile_")
+                for reference, group in frame[["reference", "material_group"]]
+                .drop_duplicates()
+                .itertuples(index=False, name=None)
+            )
+        )
+        self.assertFalse(
+            frame.duplicated(
+                [
+                    "reference",
+                    "material_group",
+                    *CONDITION_FEATURES,
+                ]
+            ).any()
+        )
 
 
 if __name__ == "__main__":
