@@ -37,13 +37,36 @@ python code/run_asv_source_selection.py \
   --predictor-set asv_specific \
   --exclude-training-only \
   --out work/asv_without_training_only_sources
+
+python code/run_asv_source_selection.py \
+  --data data/asv/analysis_input.csv \
+  --predictor-set shared \
+  --exclude-training-only \
+  --out work/asv_without_training_only_shared_features
+
+# Exclude Sun [40] from training when evaluating Alchouron [39].
+python code/run_asv_source_selection.py \
+  --data data/asv/analysis_input.csv \
+  --predictor-set asv_specific \
+  --exclude-training-source "[40]" \
+  --out work/asv_without_sun_training
+
+# Exclude Alchouron [39] from training when evaluating Sun [40].
+python code/run_asv_source_selection.py \
+  --data data/asv/analysis_input.csv \
+  --predictor-set asv_specific \
+  --exclude-training-source "[39]" \
+  --out work/asv_without_alchouron_training
 ```
 
 The `shared` predictor set uses C, H, O, surface area, and the four condition
 variables used in the primary IBU/Sr/Cd models. The `asv_specific` set also uses
 Fe and the reported elemental ratios. Both are compared with the same seven
 property rules. `--exclude-training-only` removes the Lata and Jin blocks from
-model fitting while keeping the seven test panels unchanged.
+model fitting while keeping the seven test panels unchanged. The final two
+commands reproduce the paired Table S8 sensitivity: use the Alchouron [39]
+outer-test rows from the first run and the Sun [40] outer-test rows from the
+second; each run excludes the other digitized source from training.
 
 Each run writes study-block-level and condition-level results, inner-validation
 scores, selected strategies, support counts, summary tables, and a protocol

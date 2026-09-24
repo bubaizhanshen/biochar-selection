@@ -7,6 +7,7 @@ import pandas as pd
 from run_asv_source_selection import (
     CONDITION_FEATURES,
     FULL_MATERIAL_FEATURES,
+    outer_training_rows,
     panel_support,
     validate_data,
 )
@@ -72,6 +73,20 @@ class AsvSourceSelectionTest(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "Missing required values"):
             validate_data(frame, self.config())
+
+    def test_outer_training_excludes_test_and_additional_source(self):
+        frame = pd.DataFrame(
+            {
+                "reference": ["test", "keep", "exclude"],
+                "value": [1, 2, 3],
+            }
+        )
+
+        training = outer_training_rows(frame, "reference", "test", ("exclude",))
+        default_training = outer_training_rows(frame, "reference", "test")
+
+        self.assertEqual(training["reference"].tolist(), ["keep"])
+        self.assertEqual(default_training["reference"].tolist(), ["keep", "exclude"])
 
     def test_packaged_input_has_documented_source_and_row_provenance(self):
         root = Path(__file__).resolve().parents[1]

@@ -115,6 +115,17 @@ def panel_support(frame: pd.DataFrame, source: str, config: dict) -> dict:
     }
 
 
+def outer_training_rows(
+    frame: pd.DataFrame,
+    source_column: str,
+    test_source: str,
+    excluded_sources: tuple[str, ...] = (),
+) -> pd.DataFrame:
+    """Remove the held-out source and any prespecified sources from fitting."""
+    excluded = {str(test_source), *(str(source) for source in excluded_sources)}
+    return frame.loc[~frame[source_column].astype(str).isin(excluded)].copy()
+
+
 def make_model(name: str, parameters: dict):
     return TransformedTargetRegressor(
         regressor=make_pipeline(StandardScaler(), make_regressor(name, parameters)),
@@ -224,7 +235,14 @@ def choose_strategy(scores: dict[str, dict[str, float]], objective: str, order: 
     return min(order, key=lambda name: (scores[name][objective], order.index(name)))
 
 
-def run(data_path: Path, config_path: Path, out: Path, predictor_set: str, exclude_training_only: bool) -> None:
+def run(
+    data_path: Path,
+    config_path: Path,
+    out: Path,
+    predictor_set: str,
+    exclude_training_only: bool,
+    exclude_training_sources: tuple[str, ...] = (),
+) -> None:
     if out.exists():
         if not out.is_dir():
             raise ValueError("Output path must be a directory")
@@ -233,6 +251,11 @@ def run(data_path: Path, config_path: Path, out: Path, predictor_set: str, exclu
     asv, model_config, _expansion = load_config(config_path)
     data = validate_data(pd.read_csv(data_path), asv)
     source_col = asv["source_column"]
+    excluded_sources = tuple(dict.fromkeys(map(str, exclude_training_sources)))
+    declared_sources = set(asv["test_sources"]) | set(asv["training_only_sources"])
+    unknown_sources = set(excluded_sources).difference(declared_sources)
+    if unknown_sources:
+        raise ValueError(f"Unknown training sources to exclude: {sorted(unknown_sources)}")
     if exclude_training_only:
         data = data[~data[source_col].astype(str).isin(asv["training_only_sources"])].reset_index(drop=True)
     test_sources = tuple(asv["test_sources"])
@@ -261,7 +284,7 @@ def run(data_path: Path, config_path: Path, out: Path, predictor_set: str, exclu
         test_panel = panel_rows(data, test_source, asv)
         if test_panel.empty:
             raise ValueError(f"Declared test source has no shared-condition panel: {test_source}")
-        outer_train = data[data[source_col].astype(str).ne(test_source)].copy()
+        outer_train = outer_training_rows(data, source_col, test_source, excluded_sources)
         inner_scores = {strategy: {"selection_loss_mg_g": [], "normalized_loss": [], "mae_mg_g": []} for strategy in strategies}
         inner_sources = []
         for validation_source in sorted(outer_train[source_col].astype(str).unique()):
@@ -425,6 +448,7 @@ def run(data_path: Path, config_path: Path, out: Path, predictor_set: str, exclu
             "with at least three biochars represented at each condition; descriptive only."
         ),
         "training_only_sources_excluded": bool(exclude_training_only),
+        "additional_training_sources_excluded": list(excluded_sources),
         "inner_selection": "equal-source mean of condition-averaged loss; model MAE is also reported",
         "outer_test_rows_excluded_from_all_fitting_and_selection": True,
         "strategies": list(strategies),
@@ -443,8 +467,22 @@ def main() -> None:
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--predictor-set", choices=("asv_specific", "shared"), required=True)
     parser.add_argument("--exclude-training-only", action="store_true")
+    parser.add_argument(
+        "--exclude-training-source",
+        action="append",
+        default=[],
+        metavar="SOURCE_ID",
+        help="Exclude this source from all outer training pools; may be repeated.",
+    )
     args = parser.parse_args()
-    run(args.data, args.config, args.out, args.predictor_set, args.exclude_training_only)
+    run(
+        args.data,
+        args.config,
+        args.out,
+        args.predictor_set,
+        args.exclude_training_only,
+        tuple(args.exclude_training_source),
+    )
 
 
 if __name__ == "__main__":

@@ -107,10 +107,32 @@ python code/run_asv_source_selection.py \
   --predictor-set asv_specific \
   --exclude-training-only \
   --out work/asv_without_training_only_sources
+
+python code/run_asv_source_selection.py \
+  --data data/asv/analysis_input.csv \
+  --predictor-set shared \
+  --exclude-training-only \
+  --out work/asv_without_training_only_shared_features
+
+# Exclude Sun [40] from training when evaluating Alchouron [39].
+python code/run_asv_source_selection.py \
+  --data data/asv/analysis_input.csv \
+  --predictor-set asv_specific \
+  --exclude-training-source "[40]" \
+  --out work/asv_without_sun_training
+
+# Exclude Alchouron [39] from training when evaluating Sun [40].
+python code/run_asv_source_selection.py \
+  --data data/asv/analysis_input.csv \
+  --predictor-set asv_specific \
+  --exclude-training-source "[39]" \
+  --out work/asv_without_alchouron_training
 ```
 
 The configuration identifies seven test panels and two training-only source
 blocks. Outputs are written to the requested directories; the input file is not
 copied into them. This is a small, retrospective, post-screen analysis, not a
 prospective validation or a population-level estimate of arsenic-model
-performance.
+performance. The last two runs reproduce the paired Table S8 sensitivity; only
+the Alchouron outer-test rows from the first run and the Sun outer-test rows
+from the second are used for that comparison.
