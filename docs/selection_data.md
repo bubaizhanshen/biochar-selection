@@ -90,9 +90,11 @@ learning methods for prediction of metal sorption onto biochars*, *Journal of
 Hazardous Materials* 378 (2019), 120727, DOI
 [10.1016/j.jhazmat.2019.06.004](https://doi.org/10.1016/j.jhazmat.2019.06.004).
 Of the 252 annotated workbook rows, 202 map to response rows in Zhu et al.'s
-published Supporting Information. The other 50 are figure-derived Wang et al.
-records used only in the expanded-training sensitivity; they are not part of
-the Zhu compilation. The selected rows and their roles are listed in
+published Supporting Information. The other 50 are figure-derived records
+from Wang et al. (DOI
+[10.1016/j.jenvman.2020.111746](https://doi.org/10.1016/j.jenvman.2020.111746))
+used only in the expanded-training sensitivity; they are not part of the Zhu
+compilation. The selected rows and their roles are listed in
 `data/metal_annotations/rows.csv`; the full workbook is not included, and its
 other rows are not attributed to Zhu et al. The Lee et al. comparison uses
 descriptors and experimental capacities from Tables 1 and 2 of the article
