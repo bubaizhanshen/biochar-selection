@@ -1,21 +1,21 @@
 # As(V) Analysis Input
 
 `analysis_input.csv` is the screened input used for the exploratory study-block
-holdout As(V) comparison. It contains 138 records from nine study blocks. The table is
-source-derived; it is not a set of 138 independent experiments. The software
-license in the repository does not grant a new license to the original source
-material. Cite the original sources listed below when reusing the data.
+holdout As(V) comparison. It contains 138 records from nine study blocks. The
+table is source-derived; it is not a set of 138 independent experiments. The
+software license in this repository does not grant a new license to the
+original source material. Cite the original sources listed below when reusing the data.
 
 ## Source and Screening
 
 Su et al. compiled 477 records from 26 studies in Supporting Information Table
 S2. Direct extraction yielded 476 numerical rows; the one-row discrepancy was
 not reconciled. Candidate study blocks were screened against the cited primary
-reports and the Alchouron thesis for source identity, an As(V)-specific
-endpoint, reported biochar descriptors, and the fields needed for exact
-condition matching. The retained conditions are initial As concentration,
-temperature, pH, and dose. The compilation did not provide contact time,
-solution matrix, or replicate identifiers, so these could not be matched.
+reports and the Alchouron thesis. Retention required a source-supported As(V)
+endpoint, reported biochar descriptors, and all fields needed for exact
+condition matching: initial As concentration, temperature, pH, and dose. The
+compilation did not provide contact time, solution matrix, or replicate
+identifiers, so these fields could not be matched.
 
 The screened table contains 108 records from eight source studies. Twelve
 Alchouron responses in that set are replaced by means digitized from Figure
@@ -23,10 +23,11 @@ Alchouron responses in that set are replaced by means digitized from Figure
 they did not distinguish As(III) from As(V); 30 As(V) means were instead
 digitized from Figure 3 of the original Sun article. Two activated-carbon
 profiles in the Tan panel were removed, leaving its three biochars. Su Table
-S2 labels 38 and 44 refer to the same study; label 34 has an irreconcilable
-concentration basis, and label 41 has a pH grid inconsistent with its primary
-report. These Su Table S2 labels are source identifiers, not this manuscript's
-reference numbers.
+S2 labels 38 and 44 refer to the same study and were not counted as separate
+blocks. Label 34 was excluded because its concentration basis could not be
+reconciled; label 41 was excluded because its pH grid conflicted with the
+primary report. These Su Table S2 labels are source identifiers, not this
+manuscript's reference numbers.
 
 | Su Table S2 label | Source and source record | Role in this analysis |
 | --- | --- | --- |
