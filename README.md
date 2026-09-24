@@ -61,6 +61,13 @@ The [Cd source-family selection check](docs/selection_data.md#separate-metal-cas
 uses those prepared inputs and withholds both Cui records together; it is a
 retrospective sensitivity rather than a fourth main task.
 
+The separate [As(V) source-held-out comparison](docs/asv_source_selection.md)
+uses a source-screened table reconstructed from Su et al.'s SI and cited primary
+studies. It is an exploratory branch, not part of the primary IBU/Sr/Cd analysis.
+The response table is not redistributed in this repository; the document lists
+its source crosswalk, required columns, exclusions, and commands for rebuilding
+the analysis input.
+
 The main inputs comprise 595 cells, 1,704 released records, and six source groups
 across IBU and Sr. These are retrospective development data, not independent
 experiment counts or a prospective test set. Models are selected within training

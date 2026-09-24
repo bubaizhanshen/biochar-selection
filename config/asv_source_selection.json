@@ -1,0 +1,14 @@
+{
+  "source_column": "reference",
+  "material_column": "material_group",
+  "response_column": "capacity_mg_g",
+  "test_sources": ["[24]", "[25]", "[30]", "[33]", "[39]", "[46]", "[40]"],
+  "training_only_sources": ["[27]", "[35]"],
+  "analysis_notes": [
+    "Exploratory source-held-out analysis assembled after screening the cited source tables.",
+    "The source-level labels refer to citations in Su et al. Table S2; the crosswalk is documented in docs/asv_source_selection.md.",
+    "The 12 Alchouron compiled response values are replaced by thesis-figure means; the Sun compiled rows are replaced by 30 species-resolved As(V) figure means.",
+    "The 138-row analysis input is not bundled in this code repository. Reconstruct it from the cited source SI and articles using Text S7 and the data dictionary.",
+    "This branch is separate from the primary IBU, Sr, and Cd analyses and is not independent prospective validation."
+  ]
+}
